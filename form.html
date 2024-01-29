@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Дякуємо за відправку форми!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            font-family: "Nunito", sans-serif;
+            background-image: linear-gradient(to right, #062261, #3f5faa);
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+          h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+            line-height: 44px;
+            color: #1cec00;
+            text-align: center;
+            font-weight: bold;
+            font-family: Fjalla One, sans-serif;
+        }
+
+        a {
+            color: #69b9ff;
+        }
+
+        .list_info {
+            text-align: left;
+            display: inline-block;
+            list-style: none;
+            margin-top: -10px;
+            margin-bottom: -11px;
+        }
+
+        .list_info li {
+            margin: 11px 0px;
+        }
+
+          #client {
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+            color: #1cec00;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #tel {
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+            color: #1cec00;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .fail {
+            margin: 10px 0 20px 0px;
+            text-align: center;
+        }
+
+        .block_success {
+            max-width: 960px;
+            padding: 70px 30px 70px 30px;
+            margin: -50px auto;
+        }
+
+        .success {
+            text-align: center;
+            color: #fff;
+            font-family: Fjalla One, sans-serif;
+        }
+
+        .li {
+            style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="block_success">
+            <h2 style="text-transform: uppercase;">Дякуємо за відправку форми!</h2>
+            <p class="success">
+                Найближчим часом наш менеджер зв'яжеться з вами!
+            </p>
+            <h3 class="success">
+                Будь ласка, перевірте правильність введеної інформації.
+            </h3>
+
+            <div class="success">
+                <ul class="list_info">
+                    <li><span>Ваше ім'я: </span><span id="client">
+                            <?=$_GET['name']?>
+                        </span></li>
+                    <li><span>Ваш телефон: </span><span id="tel">
+                            <?=$_GET['phone']?>
+                        </span></li>
+                </ul><br/>
+                <span id="submit"></span>
+            </div>
+
+            <p class="fail success">Якщо Ви допустили помилку, будь ласка, 
+                <a href="javascript: history.back(-1);">введіть дані ще раз</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
